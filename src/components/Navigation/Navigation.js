@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom';
 import s from './Navigation.module.css';
 const Navigation = () => (
   <nav>
-    <NavLink to="/" exact className={s.link} activeClassName={s.activeLink}>
+    <NavLink to="/" className={s.link} activeclassname={s.activeLink}>
       Home
     </NavLink>
-    <NavLink to="/" className={s.link} activeClassName={s.activeLink}>
+    <NavLink to="/contacts" className={s.link} activeclassname={s.activeLink}>
       Contacts
     </NavLink>
   </nav>

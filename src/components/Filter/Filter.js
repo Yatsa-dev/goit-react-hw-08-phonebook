@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import contactsActions from '../../redux/actions';
-import { getFilter } from '../../redux/selectors';
+import { contactsSelectors, changeFilter } from '../../redux/contacts';
 import s from './Filter.module.css';
 import PropTypes from 'prop-types';
 
 export default function Filter() {
-  const value = useSelector(getFilter);
+  const value = useSelector(contactsSelectors.getFilter);
   const dispatch = useDispatch();
   return (
     <label>
@@ -13,9 +12,7 @@ export default function Filter() {
       <input
         type="text"
         value={value}
-        onChange={event =>
-          dispatch(contactsActions.changeFilter(event.target.value))
-        }
+        onChange={event => dispatch(changeFilter(event.target.value))}
       />
     </label>
   );

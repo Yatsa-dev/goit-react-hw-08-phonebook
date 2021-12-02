@@ -1,19 +1,22 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Container from 'components/Container';
-import ContactForm from 'components/ContactForm';
-import ContactList from 'components/ContactList';
-import Filter from 'components/Filter';
+import { Routes, Route } from 'react-router-dom';
 import Appbar from 'components/Appbar';
+import Container from 'components/Container';
+import HomeView from 'views/HomeView';
+import RegisterView from 'views/RegisterView';
+import LoginView from 'views/LoginView';
+import ContactsView from 'views/ContactsView';
 
 export default function App() {
   return (
     <Container>
       <Appbar />
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/register" element={<RegisterView />} />
+        <Route path="/login" element={<LoginView />} />
+        <Route path="/contacts" element={<ContactsView />} />
+      </Routes>
     </Container>
   );
 }
