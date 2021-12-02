@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import logger from 'redux-logger';
 import {
   persistStore,
   persistReducer,
@@ -23,16 +22,14 @@ const middleware = getDefaultMiddleware({
   serializableCheck: {
     ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
   },
-  logger,
 });
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     contacts: persistReducer(contactsPersistConfig, contactsReducer),
   },
   devTools: process.env.NODE_ENV === 'development',
   middleware,
 });
-const persistor = persistStore(store);
 
-export default { store, persistor };
+export const persistor = persistStore(store);
