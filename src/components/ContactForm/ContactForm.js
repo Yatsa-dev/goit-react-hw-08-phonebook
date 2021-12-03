@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts';
+import { contactsOperations } from '../../redux/contacts';
 import { IoIosPersonAdd } from 'react-icons/io';
 import s from './ContactForm.module.css';
 
@@ -26,7 +26,7 @@ export default function ContactForm() {
   }
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(addContact({ name, number }));
+    dispatch(contactsOperations.addContact({ name, number }));
     reset();
   };
   const reset = () => {

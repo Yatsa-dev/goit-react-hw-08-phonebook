@@ -1,16 +1,16 @@
-// import { useState, useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Container from '../components/Container';
 import ContactForm from 'components/ContactForm';
 import ContactsList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter';
 
-// import { todosOperations, todosSelectors } from '../redux/todos';
+import { contactsOperations } from '../redux/contacts';
 
 export default function ContactsView(params) {
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  //   useEffect(() => dispatch(todosOperations.fetchTodos()), [dispatch]);
+  useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
 
   return (
     <Container>
@@ -18,6 +18,7 @@ export default function ContactsView(params) {
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
+      {/* {isLoadingTodos && <h1>Загружаем...</h1>} */}
       <ContactsList />
     </Container>
   );
