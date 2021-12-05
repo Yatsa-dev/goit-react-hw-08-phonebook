@@ -7,5 +7,5 @@
 }
 .activeLink {
   composes: link;
-  color: '#E84A5F';
+  color: #2196f3;
 }
