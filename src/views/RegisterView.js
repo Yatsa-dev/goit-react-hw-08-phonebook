@@ -42,7 +42,7 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1>Create an account</h1>
+      <h1>Create an account, please</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
