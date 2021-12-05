@@ -20,14 +20,6 @@ const Navigation = () => {
           >
             Contacts
           </NavLink>
-          <NavLink
-            to="/upload"
-            exact
-            className={s.link}
-            activeClassName={s.activeLink}
-          >
-            Download
-          </NavLink>
         </>
       )}
     </nav>
