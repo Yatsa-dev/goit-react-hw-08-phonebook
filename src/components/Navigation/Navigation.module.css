@@ -6,8 +6,10 @@
   color: #2a363b;
   font-size: 18px;
 }
-
 .activeLink {
   composes: link;
-  color: #2196f3;
+  color: #272774;
+  font-size: 22px;
+  font-weight: 700;
+  transform: scaleY(1.1);
 }

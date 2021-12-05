@@ -12,9 +12,11 @@ const styles = {
     marginRight: 4,
   },
   name: {
+    fontSize: 18,
     fontWeight: 700,
     marginRight: 12,
   },
+  button: {},
 };
 
 export default function UserMenu() {

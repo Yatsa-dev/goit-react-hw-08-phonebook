@@ -2,6 +2,7 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Switch } from 'react-router-dom';
+
 import Appbar from 'components/Appbar';
 import Container from 'components/Container';
 import Spinner from 'components/Spinner';
