@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
-// const { Alert } = antd;
 import {
   addContactRequest,
   addContactSuccess,
@@ -16,10 +15,7 @@ import {
 
 const items = createReducer([], {
   [fetchContactsSuccess]: (_, { payload }) => payload,
-  [addContactSuccess]: (state, { payload }) =>
-    state.find(e => e.name.toLowerCase() === payload.name.toLowerCase())
-      ? alert(`${payload.name} is already in contacts`)
-      : [...state, payload],
+  [addContactSuccess]: (state, { payload }) => [...state, payload],
   [deleteContactSuccess]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
 });
